@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import InsertChartIcon from '@mui/icons-material/InsertChart';
 import { Avatar, IconButton, Menu, MenuItem, Tooltip } from '@mui/material';
 import React from 'react';
+import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
 
 const settings = [{ route: 'portifolio', name: 'Go back to Portifolio' }];
 
@@ -22,7 +23,6 @@ export default function ButtonAppBar() {
 
   const handleSelectMenu = (item: string) => {
     setAnchorElUser(null);
-    console.log(item)
     if (item === 'portifolio') window.location.href = 'https://lcrezende.dev.br'
   }
 
@@ -32,9 +32,16 @@ export default function ButtonAppBar() {
         <Toolbar>
 
           <InsertChartIcon sx={{ mr: 2 }}/>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ mr: 2}}>
             Financial Dashboard
           </Typography>
+
+          <div className='flex grow'>
+            <Tooltip title="All financial data displayed is fictional and intended solely for demonstration and portfolio presentation purposes.">
+              <InfoOutlineIcon />
+            </Tooltip>
+          </div>
+
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --bg-light: #e8e8e8;
+  --bg-light: #f1f1f1;
   --card-light: #FFFFFF;
   --border-light: #E2E8F0;
 
@@ -22,6 +22,7 @@ body {
 
   background-color: var(--bg-light);
   color: var(--text-primary-light);
+  letter-spacing: 0.05rem;
 }
 
 code {
